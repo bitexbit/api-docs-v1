@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>API Docs v1 | bitextbit</title>
+    <link href="images/favicon-1bcb9093.ico" rel="icon" type="image/ico" />
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -279,7 +280,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-3912f8c1.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-e033bdd3.js"></script>
 
@@ -288,7 +289,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -296,12 +297,10 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-1fb6a9d8.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="python">Python</a>
+              <a href="#" data-language-name="javascript">Node.js</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -312,108 +311,334 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#web-sockets-api" class="toc-h1 toc-link" data-title="Web Sockets API">Web Sockets API</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
-                  </li>
-                  <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#orderbook-events" class="toc-h2 toc-link" data-title="Orderbook events">Orderbook events</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#http-api-v1" class="toc-h1 toc-link" data-title="HTTP API (v1)">HTTP API (v1)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#authorization" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#http-api-v2" class="toc-h1 toc-link" data-title="HTTP API (v2)">HTTP API (v2)</a>
+          </li>
+          <li>
+            <a href="#currencies" class="toc-h1 toc-link" data-title="Currencies">Currencies</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-all-currencies" class="toc-h2 toc-link" data-title="List all currencies">List all currencies</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#pairs" class="toc-h1 toc-link" data-title="Pairs">Pairs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-all-pairs" class="toc-h2 toc-link" data-title="List all pairs">List all pairs</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#wallets" class="toc-h1 toc-link" data-title="Wallets">Wallets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-own-wallets" class="toc-h2 toc-link" data-title="List own wallets">List own wallets</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#orders" class="toc-h1 toc-link" data-title="Orders">Orders</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#order-statuses" class="toc-h2 toc-link" data-title="Order statuses">Order statuses</a>
+                  </li>
+                  <li>
+                    <a href="#get-orderbook" class="toc-h2 toc-link" data-title="Get orderbook">Get orderbook</a>
+                  </li>
+                  <li>
+                    <a href="#list-own-orders" class="toc-h2 toc-link" data-title="List own orders">List own orders</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-single-order" class="toc-h2 toc-link" data-title="Retrieve single order">Retrieve single order</a>
+                  </li>
+                  <li>
+                    <a href="#create-order" class="toc-h2 toc-link" data-title="Create order">Create order</a>
+                  </li>
+                  <li>
+                    <a href="#cancel-order" class="toc-h2 toc-link" data-title="Cancel order">Cancel order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#exchanges" class="toc-h1 toc-link" data-title="Exchanges">Exchanges</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-all-exchanges" class="toc-h2 toc-link" data-title="List all exchanges">List all exchanges</a>
+                  </li>
+                  <li>
+                    <a href="#list-own-exchanges" class="toc-h2 toc-link" data-title="List own exchanges">List own exchanges</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#deposits" class="toc-h1 toc-link" data-title="Deposits">Deposits</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-own-deposits" class="toc-h2 toc-link" data-title="List own deposits">List own deposits</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#withdraws" class="toc-h1 toc-link" data-title="Withdraws">Withdraws</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#withdraw-statuses" class="toc-h2 toc-link" data-title="Withdraw statuses">Withdraw statuses</a>
+                  </li>
+                  <li>
+                    <a href="#list-own-made-withdraws" class="toc-h2 toc-link" data-title="List own made withdraws">List own made withdraws</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#charts" class="toc-h1 toc-link" data-title="Charts">Charts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#chart-types" class="toc-h2 toc-link" data-title="Chart types">Chart types</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-13" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-8" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+              </ul>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://www.bitexbit.com/auth/login'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the bitexbit API docs!</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Service <a href="https://bitexbit.com">bitexbit.com</a> provides open API for trading operations and broadcasting of all trading events. </p>
+<h1 id='web-sockets-api'>Web Sockets API</h1>
+<p>Currently Web Socket API can be used for getting the freshest info about lats trades, new and cancelled orders as well. Such as using socket connection reduce network overhead it&#39;s preferable way to get latest exchange rate and orderbook.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>API built on latest version of <a href="https://www.npmjs.com/package/socket.io">socket.io</a> library for Node.js. So it should be easy to get work with.</p>
+<h2 id='orderbook-events'>Orderbook events</h2>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>There are two types of order book notification messages
+In case new order was created, you&#39;ll get information about order, what amount remained after operation and list of trades created after that order.   </p>
 </blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="mf">1485686507.0944622</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"oid"</span><span class="p">:</span><span class="w"> </span><span class="mi">15234</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sell"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">935.23</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"trades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"tid"</span><span class="p">:</span><span class="w"> </span><span class="mi">14876</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"936.00"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"o_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15201</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>When order was cancelled by owner </p>
 </blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="mf">1485686413.5688234</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"oid"</span><span class="p">:</span><span class="w"> </span><span class="mi">15235</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cancel_order_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4535</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">935.23</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sell"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0123</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC_USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cancelled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>All you need to start receiving live information about orderbook is connect to <code>wss://bitexbit.com</code> and subscribe to necessary channel.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>There are chanel names have pattern <code>book_&lt;pair_name&gt;</code> where <code>&lt;pair_name&gt;</code> is any pair available in service. For example <code>book_BTC_USD</code> or <code>book_BTC_ETH</code>. </p>
+<h1 id='http-api-v1'>HTTP API (v1)</h1>
+<p>HTTP API endpoint available on <a href="https://bitexbit.com/api/v1/">https://bitexbit.com/api/v1/</a>.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Some methods requires authorization <a href="#authorization">read below</a>.</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+<aside class="success">
+We have limit in 2 calls per second from single account to authorization required methods and 100 calls per secong from single IP address to public methods.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>All HTTP methods accept <code>JSON</code> formats of requests and responses if it not specified by headers.  </p>
+<h2 id='authorization'>Authorization</h2>
+<blockquote>
+<p>To generate auth headers, use this code:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">hmac</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlencode</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<span class="k">def</span> <span class="nf">get_auth_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s">'your key'</span> <span class="o">+</span> <span class="n">urlencode</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">val</span><span class="p">:</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+        <span class="n">sign</span> <span class="o">=</span> <span class="n">hmac</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">'your keys secret'</span><span class="p">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">msg</span><span class="p">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">digestmod</span><span class="o">=</span><span class="s">'sha256'</span><span class="p">).</span><span class="n">hexdigest</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">'X-KEY'</span><span class="p">:</span> <span class="s">'your key'</span><span class="p">,</span>
+            <span class="s">'X-SIGN'</span><span class="p">:</span> <span class="n">sign</span><span class="p">,</span>
+            <span class="s">'X-NONCE'</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)),</span>
+        <span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">hmacSha256</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">crypto-js/hmac-sha256</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// sha256 hash. or use you favorite u like</span>
+<span class="kd">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// for http requests. or use you favorite u like</span>
+
+<span class="kd">const</span> <span class="nx">BASE_URL</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">API_KEY</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">0000-0000...</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">SECRET</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Z%2........</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="c1">//Serialize for singing only. Can be used in request body if u like urlencoded form format instead of json</span>
+<span class="kd">function</span> <span class="nx">serializePayload</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nb">Object</span>
+    <span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span> <span class="c1">// get keys of payload object</span>
+    <span class="p">.</span><span class="nx">sort</span><span class="p">()</span> <span class="c1">// sort keys</span>
+    <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">key</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">key</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">=</span><span class="dl">"</span> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">payload</span><span class="p">[</span><span class="nx">key</span><span class="p">]))</span> <span class="c1">// each value should be url encoded. the most sensitive part for sign checking</span>
+    <span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">&amp;</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// to sting, separate with ampersand</span>
+<span class="p">}</span>
+
+<span class="c1">// Generates auth headers</span>
+<span class="kd">function</span> <span class="nx">getAuthHeaders</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// get SHA256 of &lt;API_KEY&gt;&lt;sorted urlencoded payload string&gt;&lt;SECRET&gt;</span>
+  <span class="kd">const</span> <span class="nx">sign</span> <span class="o">=</span> <span class="nx">hmacSha256</span><span class="p">(</span><span class="nx">API_KEY</span> <span class="o">+</span> <span class="nx">serializePayload</span><span class="p">(</span><span class="nx">payload</span><span class="p">),</span> <span class="nx">SECRET</span><span class="p">).</span><span class="nx">toString</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">X-KEY</span><span class="dl">'</span><span class="p">:</span> <span class="nx">API_KEY</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">X-SIGN</span><span class="dl">'</span><span class="p">:</span> <span class="nx">sign</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">X-NONCE</span><span class="dl">'</span><span class="p">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getWallets</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">payload</span> <span class="o">=</span> <span class="p">{};</span>
+
+  <span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">get</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">BASE_URL</span><span class="p">}</span><span class="err">/wallets/</span><span class="s2">`</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span>
+  <span class="p">};</span>
+
+  <span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createOrder</span><span class="p">(</span><span class="nx">order</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">post</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="s2">`</span><span class="p">${</span><span class="nx">BASE_URL</span><span class="p">}</span><span class="err">/order/</span><span class="s2">`</span><span class="p">,</span>
+    <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">(</span><span class="nx">order</span><span class="p">),</span>
+    <span class="na">form</span><span class="p">:</span> <span class="nx">order</span><span class="p">,</span> <span class="c1">// API accepts urlencoded form or json. Use appropriate headers!</span>
+  <span class="p">};</span>
+
+  <span class="nx">request</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// test</span>
+<span class="nx">getWallets</span><span class="p">((</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">,</span> <span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kd">const</span> <span class="nx">order</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">buy</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">pair</span><span class="p">:</span> <span class="dl">'</span><span class="s1">BTC_USD</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">amount</span><span class="p">:</span> <span class="dl">'</span><span class="s1">0.0001</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">price</span><span class="p">:</span> <span class="dl">'</span><span class="s1">0.1</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="nx">createOrder</span><span class="p">(</span><span class="nx">order</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// get json, etc</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">body</span><span class="dl">'</span><span class="p">,</span> <span class="nx">body</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>In order for access to private API methods, generate authorization keys <a href="https://bitexbit.com/profile/api">in profile settings</a>.</p>
+
+<p>All request to these methods must contain the following headers:</p>
+
+<ul>
+<li>X-KEY - your key.</li>
+<li>X-SIGN - query&#39;s POST data, sorted by keys and signed by your key&#39;s &quot;secret&quot; according to the HMAC-SHA256 method.</li>
+<li>X-NONCE - integer value, must be greater then nonce in previous api call.</li>
+</ul>
+<h1 id='http-api-v2'>HTTP API (v2)</h1>
+<p>Read more about API v2 <a href="https://bitexbit.github.io/api-docs-v2">here</a></p>
+<h1 id='currencies'>Currencies</h1><h2 id='list-all-currencies'>List all currencies</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/currencies/'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/currencies/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process response    </span>
+<span class="p">});</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"sign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ƀ"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"short_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="w">
+  </span><span class="p">},</span><span class="w"> 
   </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"sign"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ξ"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"short_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH"</span><span class="w">
+  </span><span class="p">}</span><span class="w"> 
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
+<p>Returns information about all available currencies.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p><code>GET https://bitexbit.com/api/v1/pairs/</code></p>
+<h1 id='pairs'>Pairs</h1><h2 id='list-all-pairs'>List all pairs</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/pairs/'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/pairs/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process response    </span>
+<span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"currency2"</span><span class="p">:</span><span class="w"> </span><span class="s2">"USD"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"maximum_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">100000000.00000000</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"minimum_order_size"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00000001</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"currency1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC_USD"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"price_precision"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<p>Returns information about all available pairs.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/pairs/</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -423,91 +648,321 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>currency1</td>
+<td>all</td>
+<td>Filter by first currency.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>currency2</td>
+<td>all</td>
+<td>Filter by second currency.</td>
 </tr>
 </tbody></table>
+<h1 id='wallets'>Wallets</h1><h2 id='list-own-wallets'>List own wallets</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/wallets/'</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_headers</span><span class="p">({}))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span>
+    <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/wallets/</span><span class="dl">'</span><span class="p">,</span> 
+    <span class="p">{</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">({})</span>
+    <span class="p">},</span> 
+    <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// process response    </span>
+    <span class="p">}</span>
+<span class="p">);</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample output</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"balance"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00000000</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"reserve"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00000000</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
+<p>Returns information about all wallets of account.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>GET https://bitexbit.com/api/v1/wallets/</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency_id</td>
+<td>all</td>
+<td>Filter by currency.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+This method requires authorization.
+</aside>
+<h1 id='orders'>Orders</h1><h2 id='order-statuses'>Order statuses</h2>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Status name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Active</td>
+<td>Order in queue for executing</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Canceled</td>
+<td>Order not active, permanently</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Done</td>
+<td>Order fully executed</td>
+</tr>
+</tbody></table>
+<h2 id='get-orderbook'>Get orderbook</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span> 
+    <span class="n">limit_bids</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">limit_asks</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/orderbook/BTC_USD/'</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/orderbook/BTC_USD/</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">limit_bids</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">limit_asks</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">};</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">({</span><span class="na">url</span><span class="p">:</span> <span class="nx">url</span><span class="p">,</span> <span class="na">qs</span><span class="p">:</span> <span class="nx">params</span><span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// process response    </span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output when grouping disabled</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"sell"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">911.519</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">44667</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000446</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mf">1485777324.410015</span><span class="w">
+     </span><span class="p">}</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"buy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">911.122</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">44647</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001233</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mf">1485777124.415542</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote>
+<p>Sample output when grouping enabled</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"sell"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">911.519</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000446</span><span class="w"> 
+     </span><span class="p">}</span><span class="w">
+   </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"buy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">911.122</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.001233</span><span class="w"> 
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Get full orderbook of <strong>active</strong> orders</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/orderbook/&lt;pair_name&gt;/</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit_sell</td>
+<td>all</td>
+<td>Sell orders limit</td>
+</tr>
+<tr>
+<td>limit_buy</td>
+<td>all</td>
+<td>Buy orders limit</td>
+</tr>
+<tr>
+<td>group</td>
+<td>0</td>
+<td>If set 1, then order will grouped by price</td>
+</tr>
+</tbody></table>
+<h2 id='list-own-orders'>List own orders</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/orders/own/'</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_headers</span><span class="p">({}))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/orders/own/</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">({})},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process response    </span>
+<span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.500000000</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"pair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETH_USD"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00113000</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11249</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<aside class="warning">
+This method requires authorization.
+</aside>
+
+<p>List all orders created in your account. Can be filtered by query parameters.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/orders/own/</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>all</td>
+<td>Filter by orders type (sell or buy).</td>
+</tr>
+<tr>
+<td>pair</td>
+<td>none</td>
+<td>Filter by pair.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>all</td>
+<td>Filter by status.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>2000</td>
+<td>Limiting results.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-single-order'>Retrieve single order</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">oid</span> <span class="o">=</span> <span class="mi">53189</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/order/{}/'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">oid</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">oid</span> <span class="o">=</span> <span class="mi">53189</span><span class="p">;</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/order/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">oid</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process response    </span>
+<span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1250000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC_USD"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">870.69000000</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11259</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Get detailed information about order by its id</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/order/&lt;pk&gt;/</code></p>
+<h2 id='create-order'>Create order</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">order</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="s">'buy'</span><span class="p">,</span>
+    <span class="n">pair</span><span class="p">:</span> <span class="s">'BTC_USD'</span><span class="p">,</span>
+    <span class="n">amount</span><span class="p">:</span> <span class="s">'1.0'</span><span class="p">,</span>
+    <span class="n">price</span><span class="p">:</span> <span class="s">'870.69'</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/order/'</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">order</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_headers</span><span class="p">(</span><span class="n">order</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">order</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">buy</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">pair</span><span class="p">:</span> <span class="dl">'</span><span class="s1">BTC_USD</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">amount</span><span class="p">:</span> <span class="dl">'</span><span class="s1">1.0</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">price</span><span class="p">:</span> <span class="dl">'</span><span class="s1">870.69</span><span class="dl">'</span>    
+<span class="p">};</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="nx">post</span><span class="p">({</span>
+                <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/order/</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">form</span><span class="p">:</span> <span class="nx">order</span><span class="p">,</span>
+                <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">(</span><span class="nx">order</span><span class="p">)</span>
+            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// process response</span>
+                <span class="c1">// save order id, check if it's executed</span>
+            <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="mf">1483721079.51632</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"oid"</span><span class="p">:</span><span class="w"> </span><span class="mi">11268</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">870.69000000</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00000000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"trades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sell"</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">870.69000000</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"o_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11266</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00010000</span><span class="p">,</span><span class="w"> 
+      </span><span class="nl">"tid"</span><span class="p">:</span><span class="w"> </span><span class="mi">6049</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<aside class="warning">
+This method requires authorization.
+</aside>
+
+<p>Create new order that will be automatically executed.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST https://bitexbit.com/api/v1/order/</code></p>
+<h3 id='post-params'>POST params</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -515,76 +970,379 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>type</td>
+<td>Type of order (<code>sell</code> or <code>buy</code>).</td>
+</tr>
+<tr>
+<td>pair</td>
+<td>Pair of order</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>Amount of first currency of pair.</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Price of order. This param have limited precision (See <a href="#pairs">pairs</a>).</td>
 </tr>
 </tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+<h2 id='cancel-order'>Cancel order</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">order</span><span class="p">:</span> <span class="mi">63568</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/order-cancel/'</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_headers</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">order</span><span class="p">:</span> <span class="mi">63568</span>
+<span class="p">};</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="nx">post</span><span class="p">({</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/order-cancel/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">form</span><span class="p">:</span> <span class="nx">data</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// process response    </span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"order"</span><span class="p">:</span><span class="w"> </span><span class="mi">63568</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<aside class="warning">
+This method requires authorization.
 </aside>
 
-<p>The Kittn API uses the following error codes:</p>
-
+<p>Cancel your <strong>active</strong> order. If order not exists, it&#39;s done or cancelled error message will be returned. </p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>POST https://bitexbit.com/api/v1/order-cancel/</code></p>
+<h3 id='post-params-2'>POST params</h3>
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parameter</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>order</td>
+<td>ID of order to cancel</td>
+</tr>
+</tbody></table>
+<h1 id='exchanges'>Exchanges</h1><h2 id='list-all-exchanges'>List all exchanges</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/exchanges/'</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/exchanges/</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process response    </span>
+<span class="p">});</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6030</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">839.36000000</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"pair"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC_USD"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sell"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mf">1483705817.735508</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.00281167</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/exchanges/</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pair</td>
+<td>all</td>
+<td>Filter by pair.</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>limit</td>
+<td>100</td>
+<td>Limiting results.</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>offset</td>
+<td>0</td>
+<td>Skip number of records.</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>ordering</td>
+<td>-id</td>
+<td>Ordering parameter. <code>id</code> - ascending sorting, <code>-id</code> - descending sorting.</td>
+</tr>
+</tbody></table>
+<h2 id='list-own-exchanges'>List own exchanges</h2>
+<aside class="warning">
+This method requires authorization.
+</aside>
+
+<p>List only own exchanges where your account was buyer or seller.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/exchanges/own/</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>all</td>
+<td>Filter by orders type (sell or buy).</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>pair</td>
+<td>all</td>
+<td>Filter by pair.</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>limit</td>
+<td>100</td>
+<td>Limiting results.</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>offset</td>
+<td>0</td>
+<td>Skip number of records.</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>ordering</td>
+<td>-id</td>
+<td>Ordering parameter. <code>id</code> - ascending sorting, <code>-id</code> - descending sorting.</td>
+</tr>
+</tbody></table>
+<h1 id='deposits'>Deposits</h1><h2 id='list-own-deposits'>List own deposits</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/deposits/'</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">get_auth_headers</span><span class="p">({}))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">({</span>
+                <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/deposits/</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">({})</span>
+            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// process response    </span>
+            <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mf">1485363039.18359</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">317</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">530.00000000</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<aside class="warning">
+This method requires authorization.
+</aside>
+
+<p>List your deposits</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/deposits/</code></p>
+<h1 id='withdraws'>Withdraws</h1><h2 id='withdraw-statuses'>Withdraw statuses</h2>
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Status name</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>10</td>
+<td>New</td>
+<td>Withdraw created, verification need</td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>20</td>
+<td>Verified</td>
+<td>Withdraw verified, waiting for approving</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>30</td>
+<td>Approved</td>
+<td>Approved by moderator</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>40</td>
+<td>Refused</td>
+<td>Refused by moderator. See your email for more details</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Canceled</td>
+<td>Cancelled by user</td>
+</tr>
+</tbody></table>
+<h2 id='list-own-made-withdraws'>List own made withdraws</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/v1/withdraws/'</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="n">get_auth_headers</span><span class="p">({}))</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">({</span>
+        <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/v1/withdraws/</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">headers</span><span class="p">:</span> <span class="nx">getAuthHeaders</span><span class="p">({})</span>
+    <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// process response    </span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">403</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mf">1485363466.868539</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.53000000</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<aside class="warning">
+This method requires authorization.
+</aside>
+
+<p>Get list of your withdraws</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/v1/withdraws/</code></p>
+<h3 id='query-parameters-7'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>currency_id</td>
+<td>all</td>
+<td>Filter currency.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>all</td>
+<td>Filter by status.</td>
+</tr>
+</tbody></table>
+<h1 id='charts'>Charts</h1><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'limit'</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://bitexbit.com/api/charts/BTC_USD/60/chart'</span><span class="p">,</span> <span class="n">params</span> <span class="o">=</span> <span class="n">params</span><span class="p">)</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="p">{</span><span class="na">limit</span><span class="p">:</span> <span class="mi">1</span><span class="p">};</span>
+
+<span class="nx">request</span><span class="p">.</span><span class="kd">get</span><span class="p">({</span>
+                <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://bitexbit.com/api/charts/BTC_USD/60/chart</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">qs</span><span class="p">:</span> <span class="nx">params</span>
+            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">body</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// process response    </span>
+            <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Sample output</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.262929</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"high"</span><span class="p">:</span><span class="w"> </span><span class="mf">912.236</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"low"</span><span class="p">:</span><span class="w"> </span><span class="mf">910.086</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"close"</span><span class="p">:</span><span class="w"> </span><span class="mf">911.915</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">1485777600</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"open"</span><span class="p">:</span><span class="w"> </span><span class="mf">910.424</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div><h3 id='chart-types'>Chart types</h3>
+<table><thead>
+<tr>
+<th>Type value</th>
+<th>Type name</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>1 minute</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5 minutes</td>
+</tr>
+<tr>
+<td>15</td>
+<td>15 minutes</td>
+</tr>
+<tr>
+<td>30</td>
+<td>30 minutes</td>
+</tr>
+<tr>
+<td>60</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>240</td>
+<td>4 hours</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1 day</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET https://bitexbit.com/api/charts/&lt;pair&gt;/&lt;type&gt;/chart</code></p>
+<h3 id='query-parameters-8'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>720</td>
+<td>Limiting results</td>
+</tr>
+<tr>
+<td>since</td>
+<td>None</td>
+<td>Since Timestamp</td>
+</tr>
+<tr>
+<td>until</td>
+<td>None</td>
+<td>Until Timestamp</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="python">Python</a>
+                <a href="#" data-language-name="javascript">Node.js</a>
           </div>
       </div>
     </div>
