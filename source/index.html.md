@@ -197,6 +197,24 @@ All request to these methods must contain the following headers:
 
 Read more about API v2 [here](https://bitexbit.github.io/api-docs-v2)
 
+# Success responses
+
+Code | Meaning
+-----|--------
+200  | Returns is response is success. Body of response usually contains object that affected.
+
+# Errors
+
+We are using standard HTTP statuses in responses.
+
+| Error Code | Meaning                                                                                                                                                              |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 400        | If response has http status 400 that means that client should change some input parameters to make it success. What exactly wrong returned in response body.         |
+| 401        | In case when HTTP endpoint require authentication but provided authentication headers not valid - response with status 401 will be returned and the details in body. |
+| 403        | You do not have access to do the operation. For example when you try to cancel orders that was created by other user.                                                |
+| 429        | We have different rate limits to call API methods. If you reached this - response with status 429 will be returned.                                                  |
+| 500        | Nobody is safe to make mistakes. This is the case when error happened on serer side. No details but we are see it.                                                   |
+| 502        | Looks like we under high load. Try your request later.                                                                                                               |
 
 # Currencies
 
