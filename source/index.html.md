@@ -197,6 +197,10 @@ All request to these methods must contain the following headers:
 
 Read more about API v2 [here](https://bitexbit.github.io/api-docs-v2)
 
+
+# HTTP API Gateway
+
+Read more about API Gateway [here](https://bitexbit.github.io/api-docs-gateway)
 # Success responses
 
 Code | Meaning
